@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid #888;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #0066cc;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin-top: 20px;
+    
+}
+
+.img-container {
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.img-container img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5%;
+}
+
+.img-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid white; /* Ancho y color del borde blanco */
+    border-radius: 5%;
+    box-sizing: border-box;
+    filter: blur(8px); /* Ajusta el valor de blur según tus preferencias */
+}
+
+nav {
+    position: absolute;
+    margin-top: 400px;
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: flow-root;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    background: linear-gradient(to bottom, white, #2aa53d); /* Cambia #a56c2a por el color marrón deseado */
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+}
+
+nav a:hover {
+    background: linear-gradient(to bottom, white, #a56c2a); /* Cambia #a56c2a por el color marrón deseado */
+}
+
+section {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #888;
+    padding: 10px;
+    background: linear-gradient(to bottom, #737373 0%, #ffffff 10%, #ffffff 20%, #ddd 30%, #ccc 40%);
+}
+section ul {
+    margin-left: 0;
+}
+h2 {
+    color: green;
+    text-decoration: underline green;
+}
+
+h2 span {
+    color: #ff9800;
+}
+
+p {
+    line-height: 1.5;
+}
+
+h3 {
+    color: rgb(165, 108, 42);
+}
+
+h1:before {
+    content: "Parque Natural ";
+    color: #ff9800;
+}
+
+h1:after {
+    content: " Sierra Bicuerca";
+    color: green;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #888; /* Color gris */
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    padding: 10px; /* Espaciado interior */
+}
