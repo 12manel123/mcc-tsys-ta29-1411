@@ -7,7 +7,7 @@ body {
     padding: 20px;
     border: 5px solid #888;
     display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
+    flex-direction: column;
 }
 
 h1 {
@@ -17,16 +17,43 @@ h1 {
 }
 
 main {
-    display: flex; /* Utiliza flexbox para organizar el contenido */
-    flex-direction: row; /* Alinea los elementos en fila */
-    justify-content: space-between; /* Coloca el contenido al final del título */
-    margin-top: 20px; /* Agrega espacio entre el título y el contenido */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin-top: 20px;
     
+}
+
+.img-container {
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.img-container img {
+    max-width: 100%;
+    display: block;
+    border-radius: 5%;
+}
+
+.img-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid white; /* Ancho y color del borde blanco */
+    border-radius: 5%;
+    box-sizing: border-box;
+    filter: blur(8px); /* Ajusta el valor de blur según tus preferencias */
 }
 
 nav {
     position: absolute;
-    margin-top: 100px; /* Ajusta este valor según tu preferencia para aumentar el espacio entre h1 y nav */
+    margin-top: 400px;
+    width: 150px;
 }
 
 nav ul {
@@ -36,27 +63,31 @@ nav ul {
 }
 
 nav ul li {
-    margin-bottom: 20px; /* Ajusta este valor según tu preferencia para aumentar el espacio */
+    margin-bottom: 20px;
 }
 
 nav a {
+    display: flow-root;
     text-decoration: none;
     color: #333;
     padding: 10px;
-    background-color: #ddd;
+    background: linear-gradient(to bottom, white, #2aa53d); /* Cambia #a56c2a por el color marrón deseado */
     border-radius: 5px;
-    transition: background-color 0.3s;
+    width: 70px;
+    text-align: center;
 }
+
 nav a:hover {
-    background-color: #bbb;
+    background: linear-gradient(to bottom, white, #a56c2a); /* Cambia #a56c2a por el color marrón deseado */
 }
 
 section {
     margin-left: 100px;
-    display: flex; /* Cambiado de flex: 1 a display: flex */
-    flex-direction: column; /* Cambiado de flex-direction: row a flex-direction: column */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #888;
     padding: 10px;
+    background: linear-gradient(to bottom, #737373 0%, #ffffff 10%, #ffffff 20%, #ddd 30%, #ccc 40%);
 }
 section ul {
     margin-left: 0;
@@ -86,4 +117,12 @@ h1:before {
 h1:after {
     content: " Sierra Bicuerca";
     color: green;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    color: #888; /* Color gris */
+    margin-top: auto; /* Empuja el footer hacia la parte inferior */
+    padding: 10px; /* Espaciado interior */
 }
